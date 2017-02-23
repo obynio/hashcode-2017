@@ -12,6 +12,6 @@ class Data
   public:
     Data(std::string file);
 
-    std::vector<Endpoint> endpoints;
-    std::map<int, int> video_size;
+    static std::vector<Endpoint> endpoints;
+    static std::map<int, int> video_size;
 };
