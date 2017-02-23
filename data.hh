@@ -13,4 +13,5 @@ class Data
     Data(std::string file);
 
     std::vector<Endpoint> endpoints;
+    std::map<int, int> video_size;
 };
