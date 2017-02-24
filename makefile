@@ -12,3 +12,9 @@ all:
 
 clean:
 	rm $(BIN)
+
+dataset: all
+	./hash dataset/me_at_the_zoo.in
+	./hash dataset/trending_today.in
+	./hash dataset/videos_worth_spreading.in
+	./hash dataset/kittens.in

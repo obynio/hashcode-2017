@@ -47,10 +47,10 @@ void State::initial_solution()
   }
 }
 
-void State::export_file()
+void State::export_file(std::string file)
 {
   std::ofstream myfile;
-  myfile.open ("submission");
+  myfile.open (file + ".sub");
   myfile << Data::nb_cache << "\n";
   for (unsigned int i = 0; i < buffers.size(); i++)
   {

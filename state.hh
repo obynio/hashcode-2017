@@ -22,6 +22,6 @@ class State
 
     void initial_solution();
 
-  void export_file();
+  void export_file(std::string);
 
 };
