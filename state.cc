@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <set>
 
 State::State()
 {
@@ -35,6 +36,10 @@ void State::initial_solution()
   {
     for (auto& it : buff.gain_per_video)
     {
+      static std::set<int> placed;
+      if (placed.find(it.first) != placed.end())
+        break;
+      placed.insert(it.first);
       buff.inv_gain[it.second] = it.first;
     }
     for (auto& it : buff.inv_gain)
