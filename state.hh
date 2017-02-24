@@ -22,6 +22,6 @@ class State
 
     void initial_solution();
 
-  void export();
+  void export_file();
 
 };

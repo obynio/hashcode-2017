@@ -9,7 +9,6 @@ State::State()
   buffers.resize(Data::nb_cache);
   for (auto it : buffers)
   {
-    it.total_size = Data::capacity_cache;
     it.free_size = Data::capacity_cache;
   }
 }
@@ -47,12 +46,12 @@ void State::initial_solution()
   }
 }
 
-State::export()
+void State::export_file()
 {
-  ofstream myfile;
+  std::ofstream myfile;
   myfile.open ("submission");
   myfile << Data::nb_cache;
-  for (int i = 0; i < buffers.size(); i++)
+  for (unsigned int i = 0; i < buffers.size(); i++)
     {
       myfile << i;
       for (auto v : buffers[i].videos)
