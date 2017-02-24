@@ -10,6 +10,7 @@ int main()
     std::cout << "no input file" << std::endl;
 
   State state;
+  state.initial_solution();
   state.export_file();
   return 0;
 }

@@ -54,7 +54,7 @@ void State::export_file()
   for (unsigned int i = 0; i < buffers.size(); i++)
   {
     myfile << i;
-    for (unsigned int v = 0; v < buffers[i].videos.size() - 1; i++)
+    for (int v = 0; v < ((int)buffers[i].videos.size()) - 1; v++)
     {
       myfile << buffers[i].videos[v] << " ";
     }
