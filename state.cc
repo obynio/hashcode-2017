@@ -36,16 +36,15 @@ void State::initial_solution()
   {
     for (auto& it : buff.gain_per_video)
     {
-      static std::set<int> placed;
-      if (placed.find(it.first) != placed.end())
-        break;
-      placed.insert(it.first);
       buff.inv_gain[it.second] = it.first;
     }
     for (auto& it : buff.inv_gain)
     {
       if (buff.free_size < Data::video_size[it.second])
-        break;
+        continue;
+      if (placed.find(it.second) != placed.end())
+        continue;
+      placed.insert(it.second);
       buff.videos.push_back(it.second);
       buff.free_size -= Data::video_size[it.second];
     }

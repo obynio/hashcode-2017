@@ -3,6 +3,7 @@
 
 
 #include "buffer.hh"
+#include <set>
 
 
 class State
@@ -22,6 +23,7 @@ class State
 
     void initial_solution();
 
+    std::set<int> placed;
   void export_file(std::string);
 
 };
