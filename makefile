@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -std=c++14 -pedantic
+CXXFLAGS = -std=c++14 -pedantic -fpermissive
 
 SRC = main.cc \
 			data.cc \
