@@ -1,6 +1,7 @@
 #include "data.hh"
 
 #include <string>
+#include <sstream>
 
 int Data::nb_video;
 int Data::nb_endpoint;
@@ -14,6 +15,7 @@ std::map<int, int> Data::video_size;
 Data::Data(std::string str)
 {
   std::ifstream file;
+  std::string line;
 
   file.open(str, std::ios::in);
 
@@ -22,14 +24,31 @@ Data::Data(std::string str)
     throw std::invalid_argument("error reading file");
   }
 
-  file >> nb_video;
-  file >> nb_endpoint;
-  file >> nb_request;
-  file >> nb_cache;
-  file >> capacity_cache;
+  // first line
+  std::getline(file, line);
+  std::stringstream s1(line);
 
+  s1 >> nb_video;
+  s1 >> nb_endpoint;
+  s1 >> nb_request;
+  s1 >> nb_cache;
+  s1 >> capacity_cache;
+
+  // debug
   std::cout << nb_video << std::endl;
   std::cout << capacity_cache << std::endl;
+
+  // second line
+  std::getline(file, line);
+  std::stringstream s2(line);
+
+
+  for (int i = 0; !s2.eof(); i++)
+    s2 >> video_size[i];
+
+  std::cout << video_size[2];
+
+
 
   file.close();
 }
