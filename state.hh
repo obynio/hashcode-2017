@@ -8,8 +8,7 @@
 class State
 {
   public:
-    State()
-    {}
+    State();
     State(State& other)
     {
       buffers = other.buffers;
@@ -18,6 +17,7 @@ class State
 
     std::vector<Buffer> buffers;
 
+    void check_one_buffer();
     void add_one_video();
 
 };
