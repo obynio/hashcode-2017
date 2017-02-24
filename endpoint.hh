@@ -10,7 +10,7 @@ class Endpoint
 {
   public:
     
-    Endpoint();
+    Endpoint(int id, int cost);
 
 
     std::map<int, int> request_per_video;

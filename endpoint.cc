@@ -1,8 +1,9 @@
 #include "endpoint.hh"
 
-Endpoint::Endpoint()
+Endpoint::Endpoint(int id__, int cost__)
 { 
-
+  id = id__;
+  cost = cost__;
 }
 
 
