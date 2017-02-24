@@ -13,8 +13,9 @@ all:
 clean:
 	rm $(BIN)
 
-dataset: all
-	./hash dataset/me_at_the_zoo.in
-	./hash dataset/trending_today.in
-	./hash dataset/videos_worth_spreading.in
-	./hash dataset/kittens.in
+data: all
+	zip misc/sources.zip *.cc *.hh makefile
+	./hash misc/me_at_the_zoo.in
+	./hash misc/trending_today.in
+	./hash misc/videos_worth_spreading.in
+	./hash misc/kittens.in
