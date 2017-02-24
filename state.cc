@@ -50,15 +50,15 @@ void State::export_file()
 {
   std::ofstream myfile;
   myfile.open ("submission");
-  myfile << Data::nb_cache;
+  myfile << Data::nb_cache << "\n";
   for (unsigned int i = 0; i < buffers.size(); i++)
+  {
+    myfile << i;
+    for (unsigned int v = 0; v < buffers[i].videos.size() - 1; i++)
     {
-      myfile << i;
-      for (auto v : buffers[i].videos)
-	{
-	  myfile << v + " ";
-	}
-      myfile << "\n";
+      myfile << buffers[i].videos[v] << " ";
     }
+    myfile << "\n";
+  }
   myfile.close();  
 }
