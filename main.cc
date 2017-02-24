@@ -3,9 +3,13 @@
 
 int main()
 {
-  Data data("me_at_the_zoo.in"); 
 
-//  State state;
-//  state.export_file();
+  if (argc == 2)
+    Data data(argv[1]); 
+  else
+    std::cout << "no input file" << std::endl;
+
+  State state;
+  state.export_file();
   return 0;
 }
