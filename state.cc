@@ -1,6 +1,8 @@
 #include "state.hh"
 #include "data.hh"
 
+#include <iostream>
+#include <fstream>
 
 State::State()
 {
@@ -43,4 +45,21 @@ void State::initial_solution()
       buff.free_size -= Data::video_size[it.second];
     }
   }
+}
+
+State::export()
+{
+  ofstream myfile;
+  myfile.open ("submission");
+  myfile << Data::nb_cache;
+  for (int i = 0; i < buffers.size(); i++)
+    {
+      myfile << i;
+      for (auto v : buffers[i].videos)
+	{
+	  myfile << v + " ";
+	}
+      myfile << "\n";
+    }
+  myfile.close();  
 }
