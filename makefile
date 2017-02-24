@@ -1,7 +1,9 @@
 CXX = g++
 CXXFLAGS = -std=c++14 -pedantic
 
-SRC = main.cc
+SRC = main.cc \
+			data.cc \
+			endpoint.cc
 BIN = hash
 
 all:
