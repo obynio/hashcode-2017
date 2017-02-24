@@ -56,7 +56,7 @@ Data::Data(std::string str)
     file >> lat;
     file >> cost;
 
-    Endpoint end(i, lat);
+    Endpoint end(i, lat, cost);
 
     for (int j = 0; j < cost; j++)
     {

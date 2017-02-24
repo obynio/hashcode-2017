@@ -1,9 +1,10 @@
 #include "endpoint.hh"
 
-Endpoint::Endpoint(int id__, int cost__)
+Endpoint::Endpoint(int id_, int cost_, int nb_cache_)
 { 
-  id = id__;
-  cost = cost__;
+  id = id_;
+  cost = cost_;
+  nb_cache = nb_cache_;
 }
 
 
