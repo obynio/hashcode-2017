@@ -50,13 +50,13 @@ Data::Data(std::string str)
 
   for (int i = 0; i < nb_endpoint; i++)
   {
-    int id;
+    int lat;
     int cost;
 
-    file >> id;
+    file >> lat;
     file >> cost;
 
-    Endpoint end(id, cost);
+    Endpoint end(i, lat);
 
     for (int j = 0; j < cost; j++)
     {
@@ -65,7 +65,7 @@ Data::Data(std::string str)
       file >> end.cost_per_buffer[idd];
     }
 
-    //std::cout << id << ":" << cost << std::endl;
+    //std::cout << i << ":" << lat << std::endl;
     //std::cout << end.cost_per_buffer[9] << std::endl;
 
     endpoints.push_back(end);
