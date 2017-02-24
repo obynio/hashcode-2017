@@ -8,6 +8,9 @@ int Data::nb_request;
 int Data::nb_cache;
 int Data::capacity_cache;
 
+std::vector<Endpoint> Data::endpoints;
+std::map<int, int> Data::video_size;
+
 Data::Data(std::string str)
 {
   std::ifstream file;
@@ -24,6 +27,9 @@ Data::Data(std::string str)
   file >> nb_request;
   file >> nb_cache;
   file >> capacity_cache;
+
+  std::cout << nb_video << std::endl;
+  std::cout << capacity_cache << std::endl;
 
   file.close();
 }
