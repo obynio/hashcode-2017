@@ -20,4 +20,6 @@ class State
     void check_one_buffer();
     void add_one_video();
 
+    void initial_solution();
+
 };
