@@ -12,5 +12,5 @@ This challenge was a quite close to a real-life engineering problem, pretty much
 
 These screenshots shows our algorithm operations on two different datasets.
 
-![alt tag](https://pool.sybiload.com/git/hashcode_2017/hashcode_1.jpg)
-![alt tag](https://pool.sybiload.com/git/hashcode_2017/hashcode_2.jpg)
+![alt tag](https://pool.obyn.io/git/hashcode_2017/hashcode_1.jpg)
+![alt tag](https://pool.obyn.io/git/hashcode_2017/hashcode_2.jpg)
